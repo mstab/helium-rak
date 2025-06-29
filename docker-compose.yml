@@ -3,9 +3,7 @@ version: '2'
 services:
 
   gateway-config:
-    image: nebraltd/hm-config:arm-latest
-    devices:
-    - "/dev/gpiochip0:/dev/gpiochip0"
+    image: nebraltd/hm-config:arm64-latest
     depends_on:
       - dbus-session
       - helium-miner
@@ -30,7 +28,7 @@ services:
     stop_signal: SIGINT
 
   packet-forwarder:
-    image: nebraltd/hm-pktfwd:5c3c90a
+    image: nebraltd/hm-pktfwd:arm64-latest
     depends_on:
       - multiplexer
     restart: always
