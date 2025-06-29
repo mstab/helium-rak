@@ -3,7 +3,7 @@ version: '2'
 services:
 
   gateway-config:
-    image: nebraltd/hm-config:latest
+    image: nebraltd/hm-config:arm-latest
     devices:
     - "/dev/gpiochip0:/dev/gpiochip0"
     depends_on:
